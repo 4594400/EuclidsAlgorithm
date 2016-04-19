@@ -8,18 +8,19 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         PrintWriter printWriter = new PrintWriter(System.out);
+        ScannerUtils scannerUtils = new ScannerUtils();
         Euclid euclid = new Euclid();
 
-        int a;
-        a = scanner.nextInt();
-        int b;
-        b = scanner.nextInt();
+        System.out.println("Hi! This program finds the greatest common divisor of two integers.");
 
-        printWriter.println(euclid.greatestCommonDivisor(a, b));
+        System.out.println("Please input first integer:");
+        int a = scannerUtils.readOnlyIntegers(scanner);
 
+        System.out.println("Please input second integer:");
+        int b = scannerUtils.readOnlyIntegers(scanner);
+
+        printWriter.println("Greatest common divisor of " + a + " and " + b + " is " + euclid.greatestCommonDivisor(a, b));
         scanner.close();
         printWriter.close();
-
-        //System.out.println(greatestCommonDivisor(a, b));
     }
 }
