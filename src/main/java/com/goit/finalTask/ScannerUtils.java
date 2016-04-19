@@ -1,19 +1,22 @@
 package com.goit.finalTask;
 
-import com.goit.finalTask.exceptions.WrongInputDataException;
 
 import java.util.Scanner;
 
 public class ScannerUtils {
-    public static int readOnlyIntegers(Scanner in) {
+    public static int readOnlyIntegers(Scanner in) throws InterruptedException {
         int integer;
         try {
             String input = in.nextLine();
+
+            for (int i = 0; i < input.length(); i++) {
+                Thread.sleep(3);
+            }
             if (input.equals("quit")) {
                 System.exit(0);
             }
             integer = Integer.parseInt(input);
-        } catch (WrongInputDataException e) {
+        } catch (NumberFormatException | InterruptedException e) {
             System.err.println("Only integers are allowed. Try again or enter \"quit\" to exit the program! ->");
             integer = readOnlyIntegers(in);
         }
