@@ -11,15 +11,15 @@ public class Main {
         ScannerUtils scannerUtils = new ScannerUtils();
         Euclid euclid = new Euclid();
 
-        System.out.println("Hi! This program finds the greatest common divisor of two integers.");
+        System.out.println("Hi! This program finds the greatest common divisor of two integers. If you want to exit the program enter \"quit\".");
 
         System.out.println("Please input first integer:");
-        int a = scannerUtils.readOnlyIntegers(scanner);
+        int x = scannerUtils.readOnlyIntegers(scanner);
 
         System.out.println("Please input second integer:");
-        int b = scannerUtils.readOnlyIntegers(scanner);
+        int y = scannerUtils.readOnlyIntegers(scanner);
 
-        printWriter.println("Greatest common divisor of " + a + " and " + b + " is " + euclid.greatestCommonDivisor(a, b));
+        printWriter.println("Greatest common divisor of " + x + " and " + y + " is " + euclid.greatestCommonDivisor(x, y));
         scanner.close();
         printWriter.close();
     }
