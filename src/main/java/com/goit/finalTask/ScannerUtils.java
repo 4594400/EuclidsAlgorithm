@@ -1,12 +1,12 @@
 package com.goit.finalTask;
 
 
-import com.goit.finalTask.myExceptions.WrongInputDataException;
+import com.goit.finalTask.myExceptions.ExceedingTheNumberOfAllowedAttemptsToEnterException;
 
 import java.util.Scanner;
 
 public class ScannerUtils {
-    public int count = 3;
+    private int count = 3;
 
     public int readOnlyIntegers(Scanner in) {
         int integer = 0;
@@ -14,7 +14,7 @@ public class ScannerUtils {
         while (check == true) {
             try {
                 if (count == 0) {
-                    throw new WrongInputDataException("Input was wrong 3 times. The program has finished.");
+                    throw new ExceedingTheNumberOfAllowedAttemptsToEnterException("Input was wrong 3 times. The program has finished.");
                 }
                 String input = in.nextLine();
                 if (input.equals("quit")) {
@@ -23,7 +23,7 @@ public class ScannerUtils {
                 }
                 integer = Integer.parseInt(input);
                 check = false;
-            }  catch (WrongInputDataException w) {
+            }  catch (ExceedingTheNumberOfAllowedAttemptsToEnterException w) {
                 System.out.println(w.getMessage());
                 System.exit(0);
             }  catch (NumberFormatException n) {

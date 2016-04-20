@@ -26,7 +26,7 @@ public class ScannerUtilsTest {
         assertEquals(Integer.parseInt(input), actual);
 
     }
-    @Test //(expected = NoSuchElementException.class)
+    @Test (expected = NoSuchElementException.class)
     public void testReadOnlyIntegersInputStringFormat() throws Exception {
         String input = "text";
         Scanner in = new Scanner(input);
