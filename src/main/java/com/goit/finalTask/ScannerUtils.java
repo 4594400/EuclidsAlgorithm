@@ -6,9 +6,9 @@ import com.goit.finalTask.myExceptions.WrongInputDataException;
 import java.util.Scanner;
 
 public class ScannerUtils {
-    public static int count = 3;
+    public int count = 3;
 
-    public static int readOnlyIntegers(Scanner in) {
+    public int readOnlyIntegers(Scanner in) {
         int integer = 0;
         boolean check = true;
         while (check == true) {
