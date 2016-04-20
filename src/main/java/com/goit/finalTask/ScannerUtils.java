@@ -1,7 +1,7 @@
 package com.goit.finalTask;
 
 
-import com.goit.finalTask.MyException.WrongInputDataException;
+import com.goit.finalTask.myException.WrongInputDataException;
 
 import java.util.Scanner;
 
