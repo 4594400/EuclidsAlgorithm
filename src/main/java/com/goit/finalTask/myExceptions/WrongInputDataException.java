@@ -1,4 +1,4 @@
-package com.goit.finalTask.myException;
+package com.goit.finalTask.myExceptions;
 
 
 public class WrongInputDataException extends RuntimeException {
