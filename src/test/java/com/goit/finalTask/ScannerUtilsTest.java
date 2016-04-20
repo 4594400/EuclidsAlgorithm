@@ -35,7 +35,7 @@ public class ScannerUtilsTest {
         scannerUtils.readOnlyIntegers(in);
     }
 
-    @Test
+    @Test (expected = ExceedingTheNumberOfAllowedAttemptsToEnterException.class)
     public void testReadOnlyIntegersExceedingTheNumberOfAllowedAttemptsToEnterException() throws Exception{
         Scanner in;
         String input = "text";
