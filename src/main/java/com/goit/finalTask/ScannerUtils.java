@@ -23,14 +23,17 @@ public class ScannerUtils {
                 }
                 integer = Integer.parseInt(input);
                 check = false;
+            }  catch (NumberFormatException n) {
+                count--;
+
+                System.err.println("Only integers are allowed. You have " + (count) + " attempts ->");
             }  catch (ExceedingTheNumberOfAllowedAttemptsToEnterException w) {
                 System.out.println(w.getMessage());
                 System.exit(0);
-            }  catch (NumberFormatException n) {
-                System.err.println("Only integers are allowed. Try again! You have " + (count - 1) + " attempts ->");
-                count--;
             }
         }
         return integer;
     }
+
+
 }

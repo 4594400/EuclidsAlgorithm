@@ -1,5 +1,6 @@
 package com.goit.finalTask;
 
+import com.goit.finalTask.myExceptions.ExceedingTheNumberOfAllowedAttemptsToEnterException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,6 +19,7 @@ public class ScannerUtilsTest {
         scannerUtils = new ScannerUtils();
 
     }
+
     @Test
     public void testReadOnlyIntegersInputIntegerInStringFormat() throws Exception {
         String input = "600";
@@ -26,10 +28,12 @@ public class ScannerUtilsTest {
         assertEquals(Integer.parseInt(input), actual);
 
     }
-    @Test (expected = NoSuchElementException.class)
+
+    @Test(expected = NoSuchElementException.class)
     public void testReadOnlyIntegersInputStringFormat() throws Exception {
         String input = "text";
         Scanner in = new Scanner(input);
         scannerUtils.readOnlyIntegers(in);
     }
+
 }
