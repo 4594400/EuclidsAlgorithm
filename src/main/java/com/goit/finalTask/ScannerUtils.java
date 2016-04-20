@@ -11,7 +11,7 @@ public class ScannerUtils {
     public int readOnlyIntegers(Scanner in) {
         int integer = 0;
         boolean check = true;
-        while (check == true) {
+        while (check) {
             try {
                 if (count == 0) {
                     throw new ExceedingTheNumberOfAllowedAttemptsToEnterException("Input was wrong 3 times. The program has finished.");
